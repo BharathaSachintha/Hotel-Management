@@ -51,16 +51,16 @@ namespace Assignment.Pages
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            MovingPanel.Left = btnAddRoom.Left;
-            uC_AddRoom1.Visible = true;
-            uc_CustomerRegistration1.Visible = false;
-            uC_AddRoom1.BringToFront();
+            pnlmove.Left = btnAddRoom.Left;
+            uC_AddRoom2.Visible = true;
+            uc_CustomerRegistration2.Visible = false;
+            uC_AddRoom2.BringToFront();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            uC_AddRoom1.Visible = false;
-            uc_CustomerRegistration1.Visible = false;
+            uC_AddRoom2.Visible = false;
+            uc_CustomerRegistration2.Visible = false;
             btnAddRoom.PerformClick();
         }
 
@@ -72,6 +72,40 @@ namespace Assignment.Pages
         private void guna2CirclePictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnAddRooms_Click(object sender, EventArgs e)
+        {
+            pnlmove.Left = btnAddRooms.Left;
+            uC_AddRoom2.Visible = true;
+            uc_CustomerRegistration2.Visible = false;
+            uC_AddRoom2.BringToFront();
+        }
+
+        private void btnCustomerReg_Click(object sender, EventArgs e)
+        {
+            pnlmove.Left = btnCustomerReg.Left;
+            uc_CustomerRegistration2.Visible = true;
+            uc_CustomerRegistration2.BringToFront();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            uC_CustomerCheckOut1.Visible = true;
+            uC_AddRoom2.Visible = false;
+            uc_CustomerRegistration2.Visible = false;
+            uC_CustomerCheckOut1.BringToFront();
+            pnlmove.Left = btnCheck.Left + 9;
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            pnlmove.Left = btnDetail.Left + 9;
+        }
+
+        private void btnEmp_Click(object sender, EventArgs e)
+        {
+            pnlmove.Left = btnEmp.Left + 9;
         }
     }
 }
