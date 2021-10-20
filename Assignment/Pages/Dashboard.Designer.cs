@@ -55,13 +55,15 @@ namespace Assignment.Pages
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.customerDetails1 = new Assignment.User_Control.CustomerDetails();
             this.uC_CustomerCheckOut2 = new Assignment.User_Control.UC_CustomerCheckOut();
             this.uc_CustomerRegistration3 = new Assignment.User_Control.Uc_CustomerRegistration();
             this.uC_AddRoom3 = new Assignment.User_Control.UC_AddRoom();
             this.uC_AddRoom2 = new Assignment.User_Control.UC_AddRoom();
             this.uC_CustomerCheckOut1 = new Assignment.User_Control.UC_CustomerCheckOut();
             this.uc_CustomerRegistration2 = new Assignment.User_Control.Uc_CustomerRegistration();
-            this.customerDetails1 = new Assignment.User_Control.CustomerDetails();
+            this.uC_Employee1 = new Assignment.User_Control.UC_Employee();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -271,6 +273,7 @@ namespace Assignment.Pages
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.uC_Employee1);
             this.panel4.Controls.Add(this.customerDetails1);
             this.panel4.Controls.Add(this.uC_CustomerCheckOut2);
             this.panel4.Controls.Add(this.uc_CustomerRegistration3);
@@ -480,6 +483,19 @@ namespace Assignment.Pages
             this.guna2Elipse4.BorderRadius = 30;
             this.guna2Elipse4.TargetControl = this.panel4;
             // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 30;
+            this.guna2Elipse5.TargetControl = this.panel4;
+            // 
+            // customerDetails1
+            // 
+            this.customerDetails1.BackColor = System.Drawing.Color.White;
+            this.customerDetails1.Location = new System.Drawing.Point(0, -3);
+            this.customerDetails1.Name = "customerDetails1";
+            this.customerDetails1.Size = new System.Drawing.Size(1126, 505);
+            this.customerDetails1.TabIndex = 3;
+            // 
             // uC_CustomerCheckOut2
             // 
             this.uC_CustomerCheckOut2.BackColor = System.Drawing.Color.White;
@@ -530,13 +546,13 @@ namespace Assignment.Pages
             this.uc_CustomerRegistration2.Size = new System.Drawing.Size(1126, 505);
             this.uc_CustomerRegistration2.TabIndex = 2;
             // 
-            // customerDetails1
+            // uC_Employee1
             // 
-            this.customerDetails1.BackColor = System.Drawing.Color.White;
-            this.customerDetails1.Location = new System.Drawing.Point(0, -3);
-            this.customerDetails1.Name = "customerDetails1";
-            this.customerDetails1.Size = new System.Drawing.Size(1126, 505);
-            this.customerDetails1.TabIndex = 3;
+            this.uC_Employee1.BackColor = System.Drawing.Color.White;
+            this.uC_Employee1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Employee1.Name = "uC_Employee1";
+            this.uC_Employee1.Size = new System.Drawing.Size(1126, 505);
+            this.uC_Employee1.TabIndex = 4;
             // 
             // Dashboard
             // 
@@ -599,5 +615,7 @@ namespace Assignment.Pages
         private User_Control.Uc_CustomerRegistration uc_CustomerRegistration3;
         private User_Control.UC_AddRoom uC_AddRoom3;
         private User_Control.CustomerDetails customerDetails1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private User_Control.UC_Employee uC_Employee1;
     }
 }

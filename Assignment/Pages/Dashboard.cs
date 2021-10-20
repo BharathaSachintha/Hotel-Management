@@ -110,6 +110,12 @@ namespace Assignment.Pages
 
         private void btnEmp_Click(object sender, EventArgs e)
         {
+            uC_Employee1.Visible = true;
+            customerDetails1.Visible = false;
+            uC_CustomerCheckOut2.Visible = false;
+            uC_AddRoom3.Visible = false;
+            uc_CustomerRegistration3.Visible = false;
+            uC_Employee1.BringToFront();
             pnlmove.Left = btnEmp.Left + 9;
         }
     }

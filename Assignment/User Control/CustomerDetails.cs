@@ -24,18 +24,22 @@ namespace Assignment.User_Control
             if (txtSearchBy.SelectedIndex == 0)
             {
                 query = "SELECT customer.cid,customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.address,customer.checkout,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price FROM customer INNER JOIN rooms ON customer.roomid=rooms.roomid";
-                DataSet ds=fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
-            }else if(txtSearchBy.SelectedIndex==1){
+                getRecord(query);
+            }
+            else if(txtSearchBy.SelectedIndex==1){
                 query = "SELECT customer.cid,customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.address,customer.checkin,customer.checkout,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price FROM customer INNER JOIN rooms ON customer.roomid=rooms.roomid WHERE checkout is null";
-                DataSet ds = fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
-            }else if (txtSearchBy.SelectedIndex == 2)
+                getRecord(query);
+            }
+            else if (txtSearchBy.SelectedIndex == 2)
             {
                 query = "SELECT customer.cid,customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.address,customer.checkin,customer.checkout,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price FROM customer INNER JOIN rooms ON customer.roomid=rooms.roomid WHERE checkout is not null";
-                DataSet ds = fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
+                getRecord(query);
             }
+        }
+        private void getRecord(String query1)
+        {
+            DataSet ds = fn.getData(query1);
+            guna2DataGridView1.DataSource = ds.Tables[0];
         }
     }
 }

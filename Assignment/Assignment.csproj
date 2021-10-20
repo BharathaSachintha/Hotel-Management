@@ -93,6 +93,12 @@
     <Compile Include="User Control\Uc_CustomerRegistration.Designer.cs">
       <DependentUpon>Uc_CustomerRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\UC_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UC_Employee.Designer.cs">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pages\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Uc_CustomerRegistration.resx">
       <DependentUpon>Uc_CustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UC_Employee.resx">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
