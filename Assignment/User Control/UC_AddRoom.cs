@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,37 @@ namespace Assignment.User_Control
         private void UC_AddRoom_Enter(object sender, EventArgs e)
         {
             UC_AddRoom_Load(this, null);
+        }
+
+        private void btngallery_Click(object sender, EventArgs e)
+        {
+            Gallery u = new Gallery();
+            u.Visible = true;
+            //Form formBackground = new Form();
+            //try
+            //{
+            //    using(Gallery u=new Gallery())
+            //    {
+            //        formBackground.StartPosition = FormStartPosition.Manual;
+            //        formBackground.FormBorderStyle = FormBorderStyle.None;
+            //        formBackground.Opacity = .70d;
+            //        formBackground.BackColor = Color.Black;
+            //        formBackground.WindowState = FormWindowState.Maximized;
+            //        formBackground.TopMost = true;
+            //        formBackground.Location = this.Location;
+            //        formBackground.ShowInTaskbar = false;
+            //        formBackground.Show();
+            //        u.Owner = formBackground;
+            //        u.ShowDialog();
+            //        formBackground.Dispose();
+            //    }
+            //}catch(Exception ex) {
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    formBackground.Dispose();
+            //}
         }
     }
 }
